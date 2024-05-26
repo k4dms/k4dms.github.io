@@ -137,6 +137,8 @@ section ul li:hover {
 }
 
 .grid-item {
+    display: flex;
+    flex-direction: column;
     background: #1f1f1f;
     padding: 20px;
     border-radius: 5px;
@@ -161,6 +163,7 @@ section ul li:hover {
 .grid-item a {
     color: #82b1ff;
     text-decoration: none;
+    margin-top: auto;
 }
 
 .grid-item a:hover {
