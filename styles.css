@@ -1,14 +1,15 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 20px 0;
@@ -16,26 +17,29 @@ body {
 
 /* Header styles */
 header {
-    background: #35424a;
-    color: #fff;
+    background: #1f1f1f;
+    color: #e0e0e0;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0; /* уменьшен отступ */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: 700;
+    color: #e0e0e0;
 }
 
 header h2 {
     margin: 10px 0 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #b0b0b0;
 }
 
 /* Navigation styles */
 nav {
-    background: #e8491d;
-    color: #fff;
+    background: #333;
     padding: 15px 0;
     text-align: center;
 }
@@ -56,20 +60,30 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #ffffff;
 }
 
 /* Section styles */
 section {
     padding: 40px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2em;
+    color: #e0e0e0;
 }
 
 section .content {
@@ -79,10 +93,20 @@ section .content {
     align-items: center;
 }
 
-section .content img {
-    max-width: 150px;
-    border-radius: 50%;
+section#about .content {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+section#about .content img {
+    max-width: 200px;
+    border-radius: 15px;
     margin: 20px;
+}
+
+section#about .content p {
+    flex: 1;
+    margin-left: 20px;
 }
 
 /* Skills and Education */
@@ -93,10 +117,16 @@ section ul {
 }
 
 section ul li {
-    background: #e4e4e4;
+    background: #1f1f1f;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+section ul li:hover {
+    background: #333;
+    color: #ffffff;
 }
 
 /* Portfolio */
@@ -107,43 +137,96 @@ section ul li {
 }
 
 .grid-item {
-    background: #fff;
+    background: #1f1f1f;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .grid-item h3 {
     margin-top: 0;
+    color: #e0e0e0;
+}
+
+.grid-item p {
+    color: #b0b0b0;
+}
+
+.grid-item a {
+    color: #82b1ff;
+    text-decoration: none;
+}
+
+.grid-item a:hover {
+    text-decoration: underline;
+}
+
+/* Resume */
+.resume-button-container {
+    text-align: center;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #e0e0e0;
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.resume-button i {
+    margin-right: 10px;
+}
+
+.resume-button:hover {
+    background: #555;
+    color: #ffffff;
 }
 
 /* Contact */
 .social {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.social li {
-    display: inline;
-}
-
-.social li a {
-    color: #333;
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: #e0e0e0;
+    background: #333;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.social li a:hover {
-    color: #e8491d;
+.social-button i {
+    margin-right: 10px;
+}
+
+.social-button:hover {
+    background: #555;
+    color: #ffffff;
 }
 
 /* Footer */
 footer {
-    background: #35424a;
-    color: #fff;
+    background: #1f1f1f;
+    color: #e0e0e0;
     text-align: center;
     padding: 20px 0;
 }
@@ -161,5 +244,22 @@ footer p {
 
     section .content {
         flex-direction: column;
+    }
+
+    section#about .content img {
+        margin: 0 auto 20px;
+    }
+
+    section#about .content p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .social {
+        flex-direction: column;
+    }
+
+    .social-button {
+        margin-bottom: 10px;
     }
 }
