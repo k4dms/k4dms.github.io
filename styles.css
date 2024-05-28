@@ -164,7 +164,6 @@ section ul li:hover {
 
 .resume-button-container {
     text-align: center;
-    margin-bottom: 10vh;
 }
 
 .resume-button {
@@ -226,7 +225,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
 }
 
 @media (max-width: 768px) {
