@@ -218,7 +218,8 @@ section ul li:hover {
 }
 
 footer {
-    background: rgba(31,31,31, 0.6);
+    background: rgba(31,31,31, 0.75);
+    box-shadow: 0 -4px 4px 0 rgba(31,31,31, 0.75);
     color: #e0e0e0;
     text-align: center;
     padding: 10px 0;
