@@ -1,1 +1,1 @@
-# Сайт-визитка, портфолио, контакты  https://k4dms.github.io/
+# Портфолио  https://k4dms.github.io/
