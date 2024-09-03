@@ -164,7 +164,9 @@ section ul li:hover {
 
 .resume-button-container {
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: center;
 }
 
 .resume-button {
@@ -177,10 +179,16 @@ section ul li:hover {
     font-size: 1.2em;
     transition: background 0.3s ease, color 0.3s ease;
     text-align: center;
+    width: 300px; /* Задаем фиксированную ширину */
 }
 
 .resume-button i {
     margin-right: 10px;
+}
+
+.container-resume {
+    text-align: center;
+    margin-bottom: 10vh;
 }
 
 .resume-button:hover {
